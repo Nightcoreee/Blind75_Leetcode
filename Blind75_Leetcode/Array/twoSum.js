@@ -24,4 +24,4 @@ var twoSum = function(numbers, target) {
     }
     return "Not found numbers equal target";
 }
-console.log(twoSum([2,7,11,15], 9));
+console.log(twoSum([7,2,11,15], 10));

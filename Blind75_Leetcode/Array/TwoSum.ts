@@ -1,3 +1,4 @@
+//O(n^2) solution using brute force
 function TwoSum(nums: number[], target: number): number[] {
     for (let i=0; i<nums.length; i++){
         for (let j=i+1; j<nums.length; j++) {
@@ -9,3 +10,15 @@ function TwoSum(nums: number[], target: number): number[] {
     return [];
 };
 
+//O(n) solution using HashMap
+function TwoSumHashMap (nums: number[], target: number): number[] {
+    const map: Map<number, number> = new Map();
+    for (let i=0; i<nums.length; i++) {
+        const need = target - nums[i];
+        if (map.has(need)) {
+            return [map.get(need)!, i];
+        }
+        map.set(nums[i], i);
+    }
+    return [];
+}
