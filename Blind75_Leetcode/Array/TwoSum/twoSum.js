@@ -1,5 +1,5 @@
 // Cách 1 O(n^2)
-var twoSum = function(numbers, target) {
+var twoSum_BF = function(numbers, target) {
     for (let i=0; i<numbers.length; i++){
         for (let j=i+1; j<numbers.length; j++){
             if (numbers[i] + numbers[j] === target){
@@ -9,9 +9,10 @@ var twoSum = function(numbers, target) {
     }
     return "Not found numbers equal target";
 }
+console.log(twoSum_BF([7,2,11,15], 10));
 
 //Cách 2 O(n)
-var twoSum = function(numbers, target) {
+var twoSum_HM = function(numbers, target) {
     let map = new Map();
 
     for (let i = 0; i < numbers.length; i++) {
@@ -24,4 +25,4 @@ var twoSum = function(numbers, target) {
     }
     return "Not found numbers equal target";
 }
-console.log(twoSum([7,2,11,15], 10));
+console.log(twoSum_HM([7,2,11,15], 10));
