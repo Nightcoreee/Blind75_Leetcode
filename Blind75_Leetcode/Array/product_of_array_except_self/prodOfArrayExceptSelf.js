@@ -49,7 +49,8 @@ var prodOfArrayExceptSelf_PS = function(nums) {
 
 console.log(prodOfArrayExceptSelf_PS([1,2,3,4]));
 
-
+//O(n) time 
+//Solution: Prefix and Suffix Product Optimal
 var prodOfArrayExceptSelf_Opt = function(nums) {
     let n = nums.length;
     const res =  new Array(n).fill(1);
