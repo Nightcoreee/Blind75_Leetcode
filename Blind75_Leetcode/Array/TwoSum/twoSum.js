@@ -26,3 +26,5 @@ var twoSum_HM = function(numbers, target) {
     return "Not found numbers equal target";
 }
 console.log(twoSum_HM([7,2,11,15], 10));
+
+
