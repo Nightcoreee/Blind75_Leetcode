@@ -18,13 +18,15 @@ console.log(MaxSubArray_BF([-2,1,-3,4,-1,2,1,-5,4]));
 
 //O(2^n)
 //Solution: Recursion
-// function MaxSubarray_Recursion(nums: number[]): number {
-//     const dfs = (i, flag) => {
-//             if (i === nums.length) return flag ? 0 : -1e6;
-//             if (flag) return Math.max(0, nums[i] + dfs(i + 1, true));
-//             return Math.max(dfs(i + 1, false), nums[i] + dfs(i + 1, true));
-//         };
-//         return dfs(0, false);
-// }
+function MaxSubarray_Recursion(nums: number[]): number {
+    const dfs = (i: number, flag: boolean): number => {
+            if (i === nums.length) return flag ? 0 : -Infinity;
+            if (flag) return Math.max(0, nums[i] + dfs(i + 1, true));
+            return Math.max(
+                dfs(i + 1, false), 
+                nums[i] + dfs(i + 1, true));
+        };
+        return dfs(0, false);
+}
 
 console.log(Subarray_Recursion([-2,1,-3,4,-1,2,1,-5,4]));
