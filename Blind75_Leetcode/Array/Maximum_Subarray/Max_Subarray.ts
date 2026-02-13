@@ -32,7 +32,7 @@ function MaxSubarray_Recursion(nums: number[]): number {
         return dfs(0, false);
 }
 
-console.log(Subarray_Recursion([-2,1,-3,4,-1,2,1,-5,4]));
+console.log(MaxSubarray_Recursion([-2,1,-3,4,-1,2,1,-5,4]));
 
 
 //O(n)
